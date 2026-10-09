@@ -17,9 +17,7 @@ const Header = () => {
             </Link>
     </div>
     </div>
-    <div>
-        <BookSearch />
-    </div>
+    
 </div>
 
     

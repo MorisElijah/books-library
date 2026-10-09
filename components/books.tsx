@@ -1,5 +1,6 @@
 import { Book, TrendingResponse } from "@/types/type";
 import { LoadingIndicator } from "@/components/application/loading-indicator/loading-indicator";
+import BookSearch from "./bookSearch";
  
 export const DotCircleWithLabelDemo = () => {
     return <LoadingIndicator type="dot-circle" size="md" label="Loading..." />;
@@ -24,6 +25,10 @@ export default async function BooksPage() {
   const books = await getTrendingBooks();
 
   return (
+    <div>
+      <div>
+        <BookSearch />
+    </div>
     <main className="p-6">
       <h1 className="text-3xl font-bold mb-6">Trending Today</h1>
 
@@ -52,5 +57,7 @@ export default async function BooksPage() {
         ))}
       </ul>
     </main>
+    </div>
+    
   );
 }
